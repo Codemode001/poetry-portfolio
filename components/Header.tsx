@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Avatar from "@mui/material/Avatar";
 
 import { ThemeProps } from "types/types";
 

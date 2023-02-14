@@ -2,8 +2,9 @@ import React from "react";
 import styled from "@emotion/styled";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { FaTiktok } from "react-icons/fa";
+import { ThemeProps } from "types/types";
 
-const Iam = ({ isDark }: { isDark: boolean }) => {
+const Iam = ({ isDark }: ThemeProps) => {
   return (
     <>
       <MainContainer
@@ -21,14 +22,16 @@ const Iam = ({ isDark }: { isDark: boolean }) => {
           </section>
         </IamContainer>
       </MainContainer>
-      <VideoPlat>
-        <VideoPlatIcons>
-          <YouTubeIcon style={{ fontSize: "3rem" }} />
-        </VideoPlatIcons>
-        <VideoPlatIcons>
-          <FaTiktok />
-        </VideoPlatIcons>
-      </VideoPlat>
+      <div className="video-plat-container">
+        <VideoPlat className="video-plat">
+          <VideoPlatIcons>
+            <YouTubeIcon style={{ fontSize: "3rem" }} />
+          </VideoPlatIcons>
+          <VideoPlatIcons>
+            <FaTiktok />
+          </VideoPlatIcons>
+        </VideoPlat>
+      </div>
     </>
   );
 };
@@ -46,13 +49,7 @@ const VideoPlatIcons = styled.div`
 `;
 
 const VideoPlat = styled.div`
-  margin: 2rem 0 0 0;
-  width: 10%;
   height: 11rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
 `;
 
 const IamContainer = styled.div`
