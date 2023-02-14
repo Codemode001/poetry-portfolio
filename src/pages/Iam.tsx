@@ -22,13 +22,22 @@ const Iam = ({ isDark }: ThemeProps) => {
           </section>
         </IamContainer>
       </MainContainer>
-      <div className="video-plat-container">
+      <div
+        className="video-plat-container"
+        style={{ color: isDark ? "white" : "black" }}
+      >
         <VideoPlat className="video-plat">
-          <VideoPlatIcons>
-            <YouTubeIcon style={{ fontSize: "3rem" }} />
+          <VideoPlatIcons
+            style={{ backgroundColor: isDark ? "#455163" : "#eeeeee" }}
+          >
+            <YouTubeIcon
+              style={{ fontSize: "3rem", color: isDark ? "white" : "black" }}
+            />
           </VideoPlatIcons>
-          <VideoPlatIcons>
-            <FaTiktok />
+          <VideoPlatIcons
+            style={{ backgroundColor: isDark ? "#455163" : "#eeeeee" }}
+          >
+            <FaTiktok style={{ color: isDark ? "white" : "black" }} />
           </VideoPlatIcons>
         </VideoPlat>
       </div>
@@ -41,7 +50,6 @@ const VideoPlatIcons = styled.div`
   border-radius: 50%;
   height: 4rem;
   width: 4rem;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
