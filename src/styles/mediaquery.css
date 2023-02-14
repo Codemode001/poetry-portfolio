@@ -1,0 +1,29 @@
+@media only screen and (max-width: 600px) {
+  .Iam-haroldP {
+    font-size: 5rem;
+  }
+  .Iam-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .Iam-haroldP {
+    font-size: 7rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Iam-haroldP {
+    font-size: 9rem;
+  }
+  .Iam-container {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 1200px) {
+}

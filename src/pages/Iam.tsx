@@ -4,11 +4,11 @@ import styled from "@emotion/styled";
 const Iam = () => {
   return (
     <MainContainer>
-      <IamContainer>
+      <IamContainer className="Iam-container">
         <section className="upper-section">
           <p>I AM</p>
         </section>
-        <h1>Harold P.</h1>
+        <h1 className="Iam-haroldP">Harold P.</h1>
         <section className="lower-section">
           <p>SPOKEN ARTIST</p>
         </section>
@@ -18,7 +18,7 @@ const Iam = () => {
 };
 
 const IamContainer = styled.div`
-  width: 50%;
+  width: 80%;
 `;
 
 const MainContainer = styled.div`
@@ -38,7 +38,6 @@ const MainContainer = styled.div`
   }
 
   & h1 {
-    font-size: 9rem;
     font-family: var(--prof-font);
   }
 `;
