@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const Iam = () => {
+const Iam = ({ isDark }: { isDark: boolean }) => {
   return (
-    <MainContainer>
+    <MainContainer
+      style={isDark ? { color: "white" } : { color: "var(--dark-background)" }}
+    >
       <IamContainer className="Iam-container">
         <section className="upper-section">
           <p>I AM</p>

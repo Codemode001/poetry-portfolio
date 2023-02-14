@@ -12,7 +12,7 @@ import ListItem from "@mui/material/ListItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import EmailIcon from "@mui/icons-material/Email";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 import type { RootState } from "../../store/store";
 import { updateValue } from "slices/slices";
@@ -67,7 +67,7 @@ export default function Home() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
       style={{
-        backgroundColor: isDark ? "#0f1115" : "white",
+        backgroundColor: "#0f1115",
       }}
     >
       <List style={drawerStyle}>
@@ -98,8 +98,8 @@ export default function Home() {
               <div className="list-items-desc">INSTAGRAM</div>
             </ListItem>
             <ListItem>
-              <EmailIcon className="drawer-icons" />
-              <div className="list-items-desc">GMAIL</div>
+              <TwitterIcon className="drawer-icons" />
+              <div className="list-items-desc">TWITTER</div>
             </ListItem>
             <ListItem
               style={{
@@ -147,8 +147,9 @@ export default function Home() {
         >
           <div className="social-icons">FACEBOOK</div>
           <div className="social-icons">INSTAGRAM</div>
-          <div className="social-icons">GMAIL</div>
-          {/* CREATE DEVELOPER MODE PARA MAKITA SA UBAN UNSA KA NA DEVELOPER */}
+          <div className="social-icons">TWITTER</div>
+          {/* <div className="social-icons">GMAIL</div> */}
+          {/* <div className="social-icons">DEVELOPER MODE</div> */}
         </SocialIcons>
         <MenuContainer>
           {(["top"] as const).map((anchor) => (
@@ -196,7 +197,7 @@ export default function Home() {
           )}
         </HeaderButtonsContainer>
       </HeaderContainer>
-      <Iam />
+      <Iam isDark={isDark} />
     </MainContainer>
   );
 }
