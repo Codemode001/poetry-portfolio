@@ -18,6 +18,7 @@ import type { RootState } from "../../store/store";
 import { updateValue } from "slices/slices";
 import Iam from "./Iam";
 import { SayHi } from "components";
+import { AboutMe } from "components";
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
@@ -198,6 +199,7 @@ export default function Home() {
         </HeaderButtonsContainer>
       </HeaderContainer>
       <Iam isDark={isDark} />
+      <AboutMe isDark={isDark} />
     </MainContainer>
   );
 }
@@ -278,6 +280,7 @@ const HeaderContainer = styled.div`
   right: 0;
   width: 100%;
   transition: 0.6s;
+  z-index: 9999;
 
   @media (max-width: 768px) {
     justify-content: space-around;

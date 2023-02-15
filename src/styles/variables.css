@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Shadows+Into+Light&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat&display=swap");
 
 :root {
   /* palletes */
   --dark-background: #222831;
   --light-background: white;
   --purple: #663eff;
+  --darker-color: #1b2027;
 
   /* fonts */
   --cursive-font: "Shadows Into Light", cursive;
   --fat-font: "Lilita One", cursive;
   --prof-font: "Montserrat", sans-serif;
+  --formal-font: "Inter", sans-serif;
 }

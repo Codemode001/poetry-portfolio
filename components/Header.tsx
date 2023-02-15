@@ -3,8 +3,6 @@ import styled from "@emotion/styled";
 
 import { ThemeProps } from "types/types";
 
-//passed the isDark prop to know what is the chosen theme of the user
-
 const Header = ({ isDark }: ThemeProps) => {
   return (
     <Main style={isDark ? { color: "white" } : { color: "black" }}>
