@@ -145,7 +145,7 @@ export default function Home() {
             isDark ? { color: "white" } : { color: "var(--dark-background)" }
           }
         >
-          <div className="social-icons">FACEBOOK</div>
+          <div className="social-icons">FACEBOOKS</div>
           <div className="social-icons">INSTAGRAM</div>
           <div className="social-icons">TWITTER</div>
           {/* <div className="social-icons">GMAIL</div> */}
