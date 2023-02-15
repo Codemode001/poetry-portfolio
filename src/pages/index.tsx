@@ -142,7 +142,7 @@ export default function Home() {
         <Header isDark={isDark} />
         <SocialIcons
           style={
-            isDark ? { color: "white" } : { color: "var(--dark-background)" }
+            isDark ? { color: "red" } : { color: "var(--dark-background)" }
           }
         >
           <div className="social-icons">FACEBOOK</div>
