@@ -1,39 +1,12 @@
 @import url(../styles/variables.css);
 @import url(../styles/mediaquery.css);
+@import url(../styles/globalclasses.css);
 
 * {
   margin: 0;
 }
 
-.buttons-hover {
-  cursor: pointer;
-}
-
 body {
   min-height: 200vh;
   transition: background-color 0.2s ease-in-out;
-}
-
-.socials-drawer {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.drawer-design-container {
-  display: flex;
-  height: 80%;
-  justify-content: space-between;
-  width: 100%;
-  margin: 1.5rem 0 0 0;
-  position: relative;
-  width: 100%;
-}
-.drawer-icons {
-  font-size: 2rem;
-}
-
-.list-items-desc {
-  margin: 0 0 0 10px;
 }
