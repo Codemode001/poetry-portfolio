@@ -6,7 +6,6 @@ import { keyframes } from "@emotion/react";
 import Reveal from "react-awesome-reveal";
 import Grid from "@mui/material/Grid";
 import { FaGuitar, FaDrum, FaMusic } from "react-icons/fa";
-import { BsCalendarFill } from "@react-icons/all-files/Bs/BsCalendarFill";
 
 import { ThemeProps } from "types/types";
 
@@ -142,11 +141,7 @@ const AboutMe = ({ isDark }: ThemeProps) => {
                         <FaDrum style={{ margin: "0 5px 0 0 " }} /> I've been
                         playing drums since 2020
                       </p>
-                      <p>
-                        {" "}
-                        <BsCalendarFill style={{ margin: "0 5px 0 0 " }} /> This
-                        video is from 2022
-                      </p>
+                      <p> This video is from 2022</p>
                       <div
                         style={{
                           display: "flex",
@@ -190,13 +185,7 @@ const AboutMe = ({ isDark }: ThemeProps) => {
                           <FaGuitar style={{ margin: "0 5px 0 0 " }} /> I've
                           been playing guitar since 2016
                         </p>
-                        <p>
-                          {" "}
-                          <BsCalendarFill
-                            style={{ margin: "0 5px 0 0 " }}
-                          />{" "}
-                          This video is from 2018
-                        </p>
+                        <p> This video is from 2018</p>
                       </div>
                       <div
                         style={{
