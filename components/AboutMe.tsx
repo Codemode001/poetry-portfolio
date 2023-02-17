@@ -49,6 +49,7 @@ const AboutMe = ({ isDark }: ThemeProps) => {
   return (
     <MainContainer
       style={isDark ? { color: "white" } : { color: "var(--dark-background)" }}
+      className="about-me-main-container"
     >
       <Fade duration={1300} triggerOnce={true}>
         <AboutMeText>ABOUT ME</AboutMeText>
@@ -90,11 +91,12 @@ const AboutMe = ({ isDark }: ThemeProps) => {
         </Fade>
         {!otherSkills ? (
           <Grid container>
-            <Grid item md={6} xs={12}>
+            <Grid item md={6} xs={12} className="center-grid">
               <Reveal
                 keyframes={customAnimation}
                 duration={500}
                 triggerOnce={true}
+                className="aboutme-image"
               >
                 <Fade duration={1000} triggerOnce={true}>
                   <Image src="normal.png" />
@@ -104,9 +106,11 @@ const AboutMe = ({ isDark }: ThemeProps) => {
             <Grid item md={6} xs={12}>
               <Reveal keyframes={customAnimationRight} triggerOnce={true}>
                 <Fade duration={1000} triggerOnce={true}>
-                  <AboutMeContent>
-                    <h1>Spoken word poet | Fullstack developer</h1>
-                    <p>
+                  <AboutMeContent className="aboutme-content">
+                    <h1 className="aboutme-content-h1">
+                      Spoken word poet | Fullstack developer
+                    </h1>
+                    <p className="aboutme-content-p">
                       Greetings, I'm Harold, a spoken word poet and fullstack
                       web developer who believes that art and technology can
                       coexist in perfect harmony. As a poet, I excel at crafting
@@ -133,7 +137,7 @@ const AboutMe = ({ isDark }: ThemeProps) => {
           <Fade duration={1000}>
             <OtherSkillsContainer>
               <Grid container>
-                <Grid item xs={12} md={6} className="center-grid">
+                <Grid item xs={11} md={6} className="center-grid">
                   <Reveal keyframes={customAnimationUp} triggerOnce={true}>
                     <LargeCard>
                       <h2>Drumming</h2>
@@ -172,7 +176,7 @@ const AboutMe = ({ isDark }: ThemeProps) => {
                     </LargeCard>
                   </Reveal>
                 </Grid>
-                <Grid item xs={12} md={6} className="center-grid">
+                <Grid item xs={11} md={6} className="center-grid">
                   <Reveal
                     keyframes={customAnimationUp}
                     delay={500}
@@ -264,7 +268,6 @@ const OtherSkillsContainer = styled.div`
 const AboutMeContent = styled.div`
   & h1 {
     font-family: var(--prof-font);
-    font-size: 1.5rem;
     letter-spacing: 2px;
   }
 
@@ -274,13 +277,11 @@ const AboutMeContent = styled.div`
     line-height: 1.4rem;
     letter-spacing: 1px;
     color: #c7c8c8;
-    font-size: 0.9rem;
   }
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 25rem;
-  padding: 0 0 0 3rem;
 `;
 
 const Button = styled.button`
@@ -305,7 +306,7 @@ const TwinButton = styled.div`
 `;
 
 const Image = styled.img`
-  width: 38rem;
+  width: 100%;
   border-radius: 10px;
 `;
 
@@ -321,8 +322,6 @@ const AboutMeText = styled.div`
 `;
 
 const MainContainer = styled.div`
-  margin-top: 10rem;
-  padding: 2rem;
   position: relative;
 `;
 

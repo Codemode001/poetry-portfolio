@@ -19,6 +19,7 @@ import { updateValue } from "slices/slices";
 import { Iam } from "components";
 import { SayHi } from "components";
 import { AboutMe } from "components";
+import { Experience } from "components";
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
@@ -200,6 +201,7 @@ export default function Home() {
       </HeaderContainer>
       <Iam isDark={isDark} />
       <AboutMe isDark={isDark} />
+      <Experience isDark={isDark} />
     </MainContainer>
   );
 }
@@ -288,7 +290,7 @@ const HeaderContainer = styled.div`
 `;
 
 const MainContainer = styled.div`
-  height: 100vh;
+  height: 100%;
   position: relative;
   margin-top: 15rem;
 

@@ -16,6 +16,24 @@
     display: flex;
     justify-content: center;
   }
+  .about-me-main-container {
+    padding: 1rem;
+    margin-top: 5rem;
+  }
+  .aboutme-image {
+    width: 100%;
+    margin: 0 0 4rem 0;
+  }
+  .aboutme-content {
+    padding: 0;
+    width: 100%;
+  }
+  .aboutme-content-h1 {
+    font-size: 1.2rem;
+  }
+  .aboutme-content-p {
+    font-size: 0.8rem;
+  }
 }
 
 /* sm */
@@ -41,6 +59,22 @@
   }
   .Iam-container {
     width: 80%;
+  }
+  .about-me-main-container {
+    padding: 2rem;
+    margin-top: 10rem;
+  }
+  .aboutme-image {
+    width: 93%;
+  }
+  .aboutme-content {
+    padding: 0 0 0 3rem;
+  }
+  .aboutme-content-h1 {
+    font-size: 1.5rem;
+  }
+  .aboutme-content-p {
+    font-size: 0.9rem;
   }
 }
 /* lg */
