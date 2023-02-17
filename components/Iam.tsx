@@ -62,6 +62,7 @@ const VideoPlat = styled.div`
 
 const IamContainer = styled.div`
   width: 80%;
+  background-color: gray;
 `;
 
 const MainContainer = styled.div`
@@ -69,6 +70,7 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: lightblue;
 
   & .lower-section {
     display: flex;

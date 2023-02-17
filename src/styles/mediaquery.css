@@ -1,6 +1,7 @@
 @media only screen and (max-width: 600px) {
   .Iam-haroldP {
     font-size: 5rem;
+    background-color: tomato;
   }
   .Iam-container {
     width: 80%;
@@ -36,6 +37,7 @@
 @media only screen and (min-width: 768px) {
   .Iam-haroldP {
     font-size: 9rem;
+    background-color: tomato;
   }
   .Iam-container {
     width: 50%;

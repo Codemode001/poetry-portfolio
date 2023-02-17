@@ -16,7 +16,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 
 import type { RootState } from "../../store/store";
 import { updateValue } from "slices/slices";
-import Iam from "./Iam";
+import { Iam } from "components";
 import { SayHi } from "components";
 import { AboutMe } from "components";
 
