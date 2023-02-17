@@ -61,7 +61,7 @@ const VideoPlat = styled.div`
 `;
 
 const IamContainer = styled.div`
-  width: 80%;
+
 `;
 
 const MainContainer = styled.div`
