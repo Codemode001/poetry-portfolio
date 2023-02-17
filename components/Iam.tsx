@@ -60,9 +60,7 @@ const VideoPlat = styled.div`
   height: 11rem;
 `;
 
-const IamContainer = styled.div`
-  background-color: gray;
-`;
+const IamContainer = styled.div``;
 
 const MainContainer = styled.div`
   color: white;
