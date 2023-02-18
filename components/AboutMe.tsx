@@ -327,7 +327,7 @@ const AboutMeContentContainer = styled.div`
 
 const AboutMeText = styled.div`
   font-size: 3rem;
-  font-family: var(--formal-font);
+  font-family: var(--semi-formal);
   font-weight: 600;
   letter-spacing: 3px;
 `;
