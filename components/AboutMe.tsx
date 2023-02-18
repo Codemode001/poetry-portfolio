@@ -172,7 +172,10 @@ const AboutMe = ({ isDark }: ThemeProps) => {
                           }}
                         />
                       </div>
-                      <GIF src="dec 31, 2022 - Trim.gif" />
+                      {/* <GIF src="dec 31, 2022 - Trim.gif" /> */}
+                      <Vid autoPlay loop muted>
+                        <source src="drum.mp4" type="video/mp4" />
+                      </Vid>
                     </LargeCard>
                   </Reveal>
                 </Grid>
@@ -217,7 +220,10 @@ const AboutMe = ({ isDark }: ThemeProps) => {
                           }}
                         />
                       </div>
-                      <GIF src="Harold - Trim - Trim.gif" />
+                      {/* <GIF src="Harold - Trim - Trim.gif" /> */}
+                      <Vid autoPlay loop muted>
+                        <source src="guitar.mp4" type="video/mp4" />
+                      </Vid>
                     </LargeCard>
                   </Reveal>
                 </Grid>
@@ -229,6 +235,11 @@ const AboutMe = ({ isDark }: ThemeProps) => {
     </MainContainer>
   );
 };
+
+const Vid = styled.video`
+  width: 100%;
+  border-radius: 10px;
+`;
 
 const GIF = styled.img`
   width: 100%;
