@@ -137,8 +137,23 @@ const AboutMe = ({ isDark }: ThemeProps) => {
           <Fade duration={1000}>
             <OtherSkillsContainer>
               <Grid container>
-                <Grid item xs={11} md={6} className="center-grid">
-                  <Reveal keyframes={customAnimationUp} triggerOnce={true}>
+                <Grid
+                  item
+                  xs={12}
+                  md={6}
+                  className="center-grid"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Reveal
+                    keyframes={customAnimationUp}
+                    triggerOnce={true}
+                    style={{
+                      width: "95%",
+                    }}
+                  >
                     <LargeCard className="largeCard-skills">
                       <h2>Drumming</h2>
                       <p>
@@ -179,11 +194,23 @@ const AboutMe = ({ isDark }: ThemeProps) => {
                     </LargeCard>
                   </Reveal>
                 </Grid>
-                <Grid item xs={11} md={6} className="center-grid">
+                <Grid
+                  item
+                  xs={12}
+                  md={6}
+                  className="center-grid"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
                   <Reveal
                     keyframes={customAnimationUp}
                     delay={500}
                     triggerOnce={true}
+                    style={{
+                      width: "95%",
+                    }}
                   >
                     <LargeCard className="largeCard-skills">
                       <h2>Playing Guitar</h2>
@@ -253,7 +280,6 @@ const LargeCard = styled.div`
   }
   background-color: var(--darker-color);
 
-  width: 80%;
   border-radius: 10px;
   padding: 5rem 3rem 0 3rem;
   font-family: var(--formal-font);
@@ -322,6 +348,9 @@ const AboutMeText = styled.div`
 
 const MainContainer = styled.div`
   position: relative;
+  width 100%;
+  padding: 0;
+  margin: 0;
 `;
 
 export default AboutMe;

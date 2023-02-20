@@ -140,7 +140,7 @@ export default function Home() {
 
   return (
     <MainContainer>
-      <HeaderContainer>
+      <HeaderContainer className="main-header-container">
         <Header isDark={isDark} />
         <SocialIcons
           style={
@@ -273,7 +273,7 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-around;
   // background-color: gray;
-  padding: 1.5rem 0 1.5rem 0;
+
   height: 5rem;
   backdrop-filter: blur(8px);
   position: fixed;

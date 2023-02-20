@@ -9,4 +9,5 @@
 body {
   min-height: 200vh;
   transition: background-color 0.2s ease-in-out;
+  width: 100%;
 }
