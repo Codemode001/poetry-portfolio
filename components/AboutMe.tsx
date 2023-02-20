@@ -90,7 +90,7 @@ const AboutMe = ({ isDark }: ThemeProps) => {
           </TwinButton>
         </Fade>
         {!otherSkills ? (
-          <Grid container style={{ width: "100%" }}>
+          <Grid container style={{ width: "100%" }} className="aboutme-know-me">
             <Grid
               item
               md={6}

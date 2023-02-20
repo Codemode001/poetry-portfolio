@@ -95,6 +95,7 @@ export default function Home() {
               <FacebookIcon className="drawer-icons" />
               <div className="list-items-desc">FACEBOOK</div>
             </ListItem>
+
             <ListItem>
               <InstagramIcon className="drawer-icons" />
               <div className="list-items-desc">INSTAGRAM</div>
@@ -147,9 +148,34 @@ export default function Home() {
             isDark ? { color: "white" } : { color: "var(--dark-background)" }
           }
         >
-          <div className="social-icons">FACEBOOKS</div>
-          <div className="social-icons">INSTAGRAM</div>
-          <div className="social-icons">TWITTER</div>
+          <a
+            href="https://www.facebook.com/harold.pisos.9"
+            target="_blank"
+            style={
+              isDark ? { color: "white" } : { color: "var(--dark-background)" }
+            }
+          >
+            <div className="social-icons">FACEBOOK</div>
+          </a>
+          <a
+            href="https://www.instagram.com/haroldpisos/"
+            target="_blank"
+            style={
+              isDark ? { color: "white" } : { color: "var(--dark-background)" }
+            }
+          >
+            <div className="social-icons">INSTAGRAM</div>
+          </a>
+          <a
+            href="https://twitter.com/RheyHarolld"
+            target="_blank"
+            style={
+              isDark ? { color: "white" } : { color: "var(--dark-background)" }
+            }
+          >
+            <div className="social-icons">TWITTER</div>
+          </a>
+
           {/* <div className="social-icons">GMAIL</div> */}
           {/* <div className="social-icons">DEVELOPER MODE</div> */}
         </SocialIcons>

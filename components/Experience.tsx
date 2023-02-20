@@ -11,18 +11,21 @@ const projectsList = [
     title: "Jesus reigns 2022",
     desc: " It is a time to bring honor and praise by testifying the Lord's powerful work in their province and give Glory to God.",
     image: "Jesus-reigns.jpg",
+    youtube: "https://www.youtube.com/watch?v=qXWpQEVuq0M&t=20s",
   },
   {
     id: "02",
     title: "Mindanao youth Congress 2022",
     desc: "The Mindanao Youth Congress is a gathering of young people from across the region, brought together by a shared passion for serving the Lord and making a positive impact in their communities.",
     image: "myc.jpg",
+    youtube: "https://www.youtube.com/watch?v=o7I1Vd5AUsM",
   },
   {
     id: "03",
     title: "El and Abi's wedding",
     desc: "The Mindanao Youth Congress is a gathering of young people from across the region, brought together by a shared passion for serving the Lord and making a positive impact in their communities.",
     image: "wedding1.jpg",
+    youtube: "https://www.youtube.com/watch?v=cCtP3-GO3h8",
   },
   {
     id: "04",

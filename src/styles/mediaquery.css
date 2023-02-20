@@ -53,6 +53,9 @@
   .skills-card {
     width: 100%;
   }
+  .aboutme-know-me {
+    padding: 0;
+  }
 }
 
 /* sm */
@@ -112,6 +115,9 @@
     width: 95%;
   }
   .aboutme-text {
+    padding: 2rem;
+  }
+  .aboutme-know-me {
     padding: 2rem;
   }
 }
