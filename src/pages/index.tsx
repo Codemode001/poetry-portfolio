@@ -153,7 +153,7 @@ export default function Home() {
           {/* <div className="social-icons">GMAIL</div> */}
           {/* <div className="social-icons">DEVELOPER MODE</div> */}
         </SocialIcons>
-        <MenuContainer>
+        <MenuContainer style={{ backgroundColor: "gray" }}>
           {(["top"] as const).map((anchor) => (
             <React.Fragment key={anchor}>
               <Button onClick={toggleDrawer(anchor, true)}>
@@ -282,7 +282,7 @@ const HeaderContainer = styled.div`
   right: 0;
   width: 100%;
   transition: 0.6s;
-  z-index: 9999;
+  z-index: 20;
 
   @media (max-width: 768px) {
     justify-content: space-around;

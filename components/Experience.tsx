@@ -46,9 +46,9 @@ const Experience = ({ isDark }: ThemeProps) => {
     >
       <ExperienceText>PROJECTS</ExperienceText>
       {projectsList.map((item) => (
-        <>
-          <h1>{item.id}</h1>
+        <div className="perProjects-container">
           <PerProjects>
+            <h1>{item.id}</h1>
             <Grid container>
               <Grid item md={6} xs={12}>
                 <PerImage>
@@ -98,7 +98,7 @@ const Experience = ({ isDark }: ThemeProps) => {
               </Grid>
             </Grid>
           </PerProjects>
-        </>
+        </div>
       ))}
     </MainContainer>
   );
@@ -143,10 +143,21 @@ const PerImage = styled.div`
 
 const PerProjects = styled.div`
   margin: 7rem 0 10rem 0;
-  position: relative;
+  // position: relative;
   width: 100%;
   height: 100%;
   display: flex;
+
+  // padding: 5rem 0 0 0;
+
+  & h1 {
+    font-size: 12rem;
+    color: #6f7175;
+    position: absolute;
+    left: -3rem;
+    top: 0;
+    z-index: -99;
+  }
 `;
 
 const ExperienceText = styled.div`
@@ -158,11 +169,10 @@ const ExperienceText = styled.div`
 
 const MainContainer = styled.div`
   margin-top: 10rem;
-  & h1 {
-    font-size: 12rem;
-    color: #6f7175;
-    position: absolute;
-    left: -3rem;
+
+  & .perProjects-container {
+    display: flex;
+    position: relative;
   }
 `;
 
