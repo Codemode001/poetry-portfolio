@@ -90,13 +90,20 @@ const AboutMe = ({ isDark }: ThemeProps) => {
           </TwinButton>
         </Fade>
         {!otherSkills ? (
-          <Grid container>
-            <Grid item md={6} xs={12} className="center-grid">
+          <Grid container style={{ width: "100%" }}>
+            <Grid
+              item
+              md={6}
+              xs={12}
+              className="center-grid"
+              style={{ width: "100%", backgroundColor: "gray" }}
+            >
               <Reveal
                 keyframes={customAnimation}
                 duration={500}
                 triggerOnce={true}
                 className="aboutme-image"
+                style={{ width: "100%" }}
               >
                 <Fade duration={1000} triggerOnce={true}>
                   <Image src="normal.png" />
@@ -335,6 +342,8 @@ const Image = styled.img`
 
 const AboutMeContentContainer = styled.div`
   //   margin: 15rem 0 0 0;
+  // background-color: gray;
+  width: 100%;
 `;
 
 const AboutMeText = styled.div`

@@ -30,9 +30,10 @@
   }
   .aboutme-content-h1 {
     font-size: 1.2rem;
+    margin-top: 2rem;
   }
   .aboutme-content-p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .exp-perinfo {
     padding: 0;
