@@ -17,7 +17,7 @@
     justify-content: center;
   }
   .about-me-main-container {
-    padding: 1rem;
+    padding: 0 0 0 2rem;
     margin-top: 5rem;
   }
   .aboutme-image {
@@ -48,6 +48,9 @@
   .main-header-container {
     padding: 0;
   }
+  .skills-card {
+    width: 100%;
+  }
 }
 
 /* sm */
@@ -75,7 +78,6 @@
     width: 70%;
   }
   .about-me-main-container {
-    padding: 2rem;
     margin-top: 10rem;
   }
   .aboutme-image {
@@ -103,6 +105,9 @@
   }
   .main-header-container {
     padding: 1.5rem 0 1.5rem 0;
+  }
+  .skills-card {
+    width: 95%;
   }
 }
 /* lg */

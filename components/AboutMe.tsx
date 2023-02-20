@@ -150,9 +150,7 @@ const AboutMe = ({ isDark }: ThemeProps) => {
                   <Reveal
                     keyframes={customAnimationUp}
                     triggerOnce={true}
-                    style={{
-                      width: "95%",
-                    }}
+                    className="skills-card"
                   >
                     <LargeCard className="largeCard-skills">
                       <h2>Drumming</h2>
@@ -202,15 +200,15 @@ const AboutMe = ({ isDark }: ThemeProps) => {
                   style={{
                     display: "flex",
                     justifyContent: "center",
+
+                    padding: 0,
                   }}
                 >
                   <Reveal
                     keyframes={customAnimationUp}
                     delay={500}
                     triggerOnce={true}
-                    style={{
-                      width: "95%",
-                    }}
+                    className="skills-card"
                   >
                     <LargeCard className="largeCard-skills">
                       <h2>Playing Guitar</h2>
@@ -348,9 +346,6 @@ const AboutMeText = styled.div`
 
 const MainContainer = styled.div`
   position: relative;
-  width 100%;
-  padding: 0;
-  margin: 0;
 `;
 
 export default AboutMe;
