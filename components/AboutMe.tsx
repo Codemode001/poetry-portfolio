@@ -52,7 +52,7 @@ const AboutMe = ({ isDark }: ThemeProps) => {
       className="about-me-main-container"
     >
       <Fade duration={1300} triggerOnce={true}>
-        <AboutMeText>ABOUT ME</AboutMeText>
+        <AboutMeText className="aboutme-text">ABOUT ME</AboutMeText>
       </Fade>
       <AboutMeContentContainer>
         <Fade duration={1300} triggerOnce={true}>

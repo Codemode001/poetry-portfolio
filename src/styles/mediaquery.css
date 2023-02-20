@@ -97,7 +97,7 @@
   }
 
   .largeCard-skills {
-    min-height: 29rem;
+    min-height: 30rem;
   }
   .projects-mainContainer {
     width: auto;
@@ -108,6 +108,9 @@
   }
   .skills-card {
     width: 95%;
+  }
+  .aboutme-text {
+    padding: 2rem;
   }
 }
 /* lg */
