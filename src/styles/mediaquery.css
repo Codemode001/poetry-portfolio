@@ -37,6 +37,14 @@
   .exp-perinfo {
     padding: 0;
   }
+
+  .largeCard-skills {
+    min-height: 21.5rem;
+  }
+  .projects-mainContainer {
+    width: 100%;
+    padding: 1rem;
+  }
 }
 
 /* sm */
@@ -81,6 +89,14 @@
   }
   .exp-perinfo {
     padding: 0 0 0 6rem;
+  }
+
+  .largeCard-skills {
+    min-height: 29rem;
+  }
+  .projects-mainContainer {
+    width: auto;
+    padding: 2rem;
   }
 }
 /* lg */

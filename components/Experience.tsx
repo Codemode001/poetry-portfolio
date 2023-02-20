@@ -42,6 +42,7 @@ const Experience = ({ isDark }: ThemeProps) => {
   return (
     <MainContainer
       style={isDark ? { color: "white" } : { color: "var(--dark-background)" }}
+      className="projects-mainContainer"
     >
       <ExperienceText>PROJECTS</ExperienceText>
       {projectsList.map((item) => (
@@ -137,6 +138,7 @@ const PerImage = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 `;
 
 const PerProjects = styled.div`
@@ -145,7 +147,6 @@ const PerProjects = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: row-reverse;
 `;
 
 const ExperienceText = styled.div`
@@ -156,9 +157,7 @@ const ExperienceText = styled.div`
 `;
 
 const MainContainer = styled.div`
-  padding: 2rem;
   margin-top: 10rem;
-
   & h1 {
     font-size: 12rem;
     color: #6f7175;

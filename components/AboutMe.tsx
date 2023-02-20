@@ -139,7 +139,7 @@ const AboutMe = ({ isDark }: ThemeProps) => {
               <Grid container>
                 <Grid item xs={11} md={6} className="center-grid">
                   <Reveal keyframes={customAnimationUp} triggerOnce={true}>
-                    <LargeCard>
+                    <LargeCard className="largeCard-skills">
                       <h2>Drumming</h2>
                       <p>
                         <FaDrum style={{ margin: "0 5px 0 0 " }} /> I've been
@@ -185,7 +185,7 @@ const AboutMe = ({ isDark }: ThemeProps) => {
                     delay={500}
                     triggerOnce={true}
                   >
-                    <LargeCard>
+                    <LargeCard className="largeCard-skills">
                       <h2>Playing Guitar</h2>
                       <div>
                         <p>
@@ -240,17 +240,6 @@ const Vid = styled.video`
   width: 100%;
   border-radius: 10px;
 `;
-
-const GIF = styled.img`
-  width: 100%;
-  border-radius: 10px;
-`;
-
-const Divider = styled.div`
-  border-bottom: 1px solid white;
-  width: 100%;
-`;
-
 const LargeCard = styled.div`
   & .lower-hobby-desc {
     margin: 1rem 0 2rem 0;
@@ -263,9 +252,8 @@ const LargeCard = styled.div`
     margin-top: 5px;
   }
   background-color: var(--darker-color);
-  min-height: 25rem;
+
   width: 80%;
-  min-height: 28rem;
   border-radius: 10px;
   padding: 5rem 3rem 0 3rem;
   font-family: var(--formal-font);
