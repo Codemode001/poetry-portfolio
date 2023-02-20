@@ -96,7 +96,7 @@ const AboutMe = ({ isDark }: ThemeProps) => {
               md={6}
               xs={12}
               className="center-grid"
-              style={{ width: "100%", backgroundColor: "gray" }}
+              style={{ width: "100%" }}
             >
               <Reveal
                 keyframes={customAnimation}
