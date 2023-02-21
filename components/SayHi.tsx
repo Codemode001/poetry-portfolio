@@ -1,13 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "@emotion/styled";
-import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Button from "@mui/material/Button";
 import CloseIcon from "@mui/icons-material/Close";
+import emailjs from "@emailjs/browser";
 
 const SayHi = () => {
   const [open, setOpen] = React.useState(false);
@@ -18,6 +15,30 @@ const SayHi = () => {
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const form = useRef();
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "YOUR_SERVICE_ID",
+          "YOUR_TEMPLATE_ID",
+          form.current,
+          "YOUR_PUBLIC_KEY"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
   };
 
   return (
