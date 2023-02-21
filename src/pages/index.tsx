@@ -20,6 +20,7 @@ import { Iam } from "components";
 import { SayHi } from "components";
 import { AboutMe } from "components";
 import { Experience } from "components";
+import { Footer } from "components";
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
@@ -258,6 +259,7 @@ export default function Home() {
       <Iam isDark={isDark} />
       <AboutMe isDark={isDark} />
       <Experience isDark={isDark} />
+      <Footer isDark={isDark} />
     </MainContainer>
   );
 }
