@@ -137,6 +137,7 @@ export default function Home() {
               style={{
                 margin: "1.5rem 0 0 0",
               }}
+              onClick={(event) => event.stopPropagation()}
             >
               <SayHi />
             </ListItem>

@@ -27,18 +27,25 @@ const Iam = ({ isDark }: ThemeProps) => {
         style={{ color: isDark ? "white" : "black" }}
       >
         <VideoPlat className="video-plat">
-          <VideoPlatIcons
-            style={{ backgroundColor: isDark ? "#455163" : "#eeeeee" }}
+          <a
+            href="https://www.youtube.com/channel/UC6HRXETZCXGO2cR7qi6XUcg"
+            target="_blank"
           >
-            <YouTubeIcon
-              style={{ fontSize: "3rem", color: isDark ? "white" : "black" }}
-            />
-          </VideoPlatIcons>
-          <VideoPlatIcons
-            style={{ backgroundColor: isDark ? "#455163" : "#eeeeee" }}
-          >
-            <FaTiktok style={{ color: isDark ? "white" : "black" }} />
-          </VideoPlatIcons>
+            <VideoPlatIcons
+              style={{ backgroundColor: isDark ? "#455163" : "#eeeeee" }}
+            >
+              <YouTubeIcon
+                style={{ fontSize: "3rem", color: isDark ? "white" : "black" }}
+              />
+            </VideoPlatIcons>
+          </a>
+          <a href="https://www.tiktok.com/@haroldrhey?lang=en" target="_blank">
+            <VideoPlatIcons
+              style={{ backgroundColor: isDark ? "#455163" : "#eeeeee" }}
+            >
+              <FaTiktok style={{ color: isDark ? "white" : "black" }} />
+            </VideoPlatIcons>
+          </a>
         </VideoPlat>
       </div>
     </>
@@ -60,9 +67,7 @@ const VideoPlat = styled.div`
   height: 11rem;
 `;
 
-const IamContainer = styled.div`
-
-`;
+const IamContainer = styled.div``;
 
 const MainContainer = styled.div`
   color: white;

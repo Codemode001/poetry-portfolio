@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import Grid from "@mui/material/Grid";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import { Bounce } from "react-awesome-reveal";
+// import { Zoom } from "react-awesome-reveal";
 
 import { ThemeProps } from "types/types";
 
@@ -60,7 +60,7 @@ const Experience = ({ isDark }: ThemeProps) => {
       <ExperienceText>PROJECTS</ExperienceText>
       {projectsList.map((item) => (
         <div className="perProjects-container">
-          {/* <Bounce> */}
+          {/* <Zoom triggerOnce={true}> */}
           <PerProjects>
             <h1>{item.id}</h1>
             <Grid container>
@@ -99,20 +99,21 @@ const Experience = ({ isDark }: ThemeProps) => {
                       }}
                     />
                   </div>
-                  <div className="icons-section">
-                    <YouTubeIcon
-                      style={{
-                        fontSize: "3rem",
-                        color: isDark ? "white" : "black",
-                      }}
-                    />
-                    {/* youtube ? kana dayun */}
-                  </div>
+                  <a href={item.youtube} target="_blank">
+                    <div className="icons-section">
+                      <YouTubeIcon
+                        style={{
+                          fontSize: "3rem",
+                          color: isDark ? "white" : "black",
+                        }}
+                      />
+                    </div>
+                  </a>
                 </PerInfo>
               </Grid>
             </Grid>
           </PerProjects>
-          {/* </Bounce> */}
+          {/* </Zoom> */}
         </div>
       ))}
     </MainContainer>
@@ -157,7 +158,7 @@ const PerImage = styled.div`
 `;
 
 const PerProjects = styled.div`
-  margin: 7rem 0 10rem 0;
+  margin: 7rem 0 8rem 0;
   // position: relative;
   width: 100%;
   height: 100%;
