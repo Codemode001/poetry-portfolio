@@ -1,6 +1,7 @@
 @import url(../styles/variables.css);
 @import url(../styles/mediaquery.css);
 @import url(../styles/globalclasses.css);
+@import url(../styles/normalize.css);
 
 * {
   margin: 0;

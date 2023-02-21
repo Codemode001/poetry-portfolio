@@ -2,13 +2,14 @@ import React from "react";
 import styled from "@emotion/styled";
 import Grid from "@mui/material/Grid";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import { Bounce } from "react-awesome-reveal";
 
 import { ThemeProps } from "types/types";
 
 const projectsList = [
   {
     id: "01",
-    title: "Jesus reigns 2022",
+    title: "Jesus reigns bukidnon 2022",
     desc: " It is a time to bring honor and praise by testifying the Lord's powerful work in their province and give Glory to God.",
     image: "Jesus-reigns.jpg",
     youtube: "https://www.youtube.com/watch?v=qXWpQEVuq0M&t=20s",
@@ -29,15 +30,24 @@ const projectsList = [
   },
   {
     id: "04",
-    title: "NCMDC representative for national poetry",
+    title: "NCMDC representative for national poetry 2021",
     desc: "The Mindanao Youth Congress is a gathering of young people from across the region, brought together by a shared passion for serving the Lord and making a positive impact in their communities.",
     image: "ncmdc1.png",
+    youtube: "https://www.youtube.com/watch?v=H-e03ALqz2k",
   },
   {
     id: "05",
-    title: "Mothers day entry",
+    title: "Mothers day entry 2020",
     desc: "The Mindanao Youth Congress is a gathering of young people from across the region, brought together by a shared passion for serving the Lord and making a positive impact in their communities.",
     image: "mothersday.png",
+    youtube: "https://www.youtube.com/watch?v=W4E1t4ZNIc0",
+  },
+  {
+    id: "06",
+    title: "Youth Alive national spoken poetry competition 2020",
+    desc: "The Mindanao Youth Congress is a gathering of young people from across the region, brought together by a shared passion for serving the Lord and making a positive impact in their communities.",
+    image: "ya-2020.png",
+    youtube: "https://www.youtube.com/watch?v=cZRDxdtugHI",
   },
 ];
 
@@ -50,6 +60,7 @@ const Experience = ({ isDark }: ThemeProps) => {
       <ExperienceText>PROJECTS</ExperienceText>
       {projectsList.map((item) => (
         <div className="perProjects-container">
+          {/* <Bounce> */}
           <PerProjects>
             <h1>{item.id}</h1>
             <Grid container>
@@ -101,6 +112,7 @@ const Experience = ({ isDark }: ThemeProps) => {
               </Grid>
             </Grid>
           </PerProjects>
+          {/* </Bounce> */}
         </div>
       ))}
     </MainContainer>

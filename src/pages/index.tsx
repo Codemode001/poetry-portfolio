@@ -91,19 +91,48 @@ export default function Home() {
         </ListItem>
         <div className="drawer-design-container">
           <div className="socials-drawer">
-            <ListItem>
-              <FacebookIcon className="drawer-icons" />
-              <div className="list-items-desc">FACEBOOK</div>
-            </ListItem>
-
-            <ListItem>
-              <InstagramIcon className="drawer-icons" />
-              <div className="list-items-desc">INSTAGRAM</div>
-            </ListItem>
-            <ListItem>
-              <TwitterIcon className="drawer-icons" />
-              <div className="list-items-desc">TWITTER</div>
-            </ListItem>
+            <a
+              href="https://www.facebook.com/harold.pisos.9"
+              target="_blank"
+              style={
+                isDark
+                  ? { color: "white" }
+                  : { color: "var(--dark-background)" }
+              }
+            >
+              <ListItem>
+                <FacebookIcon className="drawer-icons" />
+                <div className="list-items-desc">FACEBOOK</div>
+              </ListItem>
+            </a>
+            <a
+              href="https://www.instagram.com/haroldpisos/"
+              target="_blank"
+              style={
+                isDark
+                  ? { color: "white" }
+                  : { color: "var(--dark-background)" }
+              }
+            >
+              <ListItem>
+                <InstagramIcon className="drawer-icons" />
+                <div className="list-items-desc">INSTAGRAM</div>
+              </ListItem>
+            </a>
+            <a
+              href="https://twitter.com/RheyHarolld"
+              target="_blank"
+              style={
+                isDark
+                  ? { color: "white" }
+                  : { color: "var(--dark-background)" }
+              }
+            >
+              <ListItem>
+                <TwitterIcon className="drawer-icons" />
+                <div className="list-items-desc">TWITTER</div>
+              </ListItem>
+            </a>
             <ListItem
               style={{
                 margin: "1.5rem 0 0 0",
@@ -179,7 +208,7 @@ export default function Home() {
           {/* <div className="social-icons">GMAIL</div> */}
           {/* <div className="social-icons">DEVELOPER MODE</div> */}
         </SocialIcons>
-        <MenuContainer style={{ backgroundColor: "gray" }}>
+        <MenuContainer>
           {(["top"] as const).map((anchor) => (
             <React.Fragment key={anchor}>
               <Button onClick={toggleDrawer(anchor, true)}>
