@@ -68,7 +68,6 @@ export default function Home() {
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
       style={{
         backgroundColor: "#0f1115",
       }}

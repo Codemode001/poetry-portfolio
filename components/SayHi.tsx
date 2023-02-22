@@ -54,11 +54,17 @@ const SayHi = () => {
             </Button>
           </DialogActions>
           <Form ref={form} onSubmit={sendEmail}>
-            <Input placeholder="Name" name="user_name" />
-            <Input placeholder="Email" name="user_email" />
+            <Input placeholder="Name" name="user_name" required />
+            <Input
+              placeholder="Email"
+              name="user_email"
+              required
+              type="email"
+            />
             <Message
               placeholder="Send me a message! I don't bite"
               name="user_message"
+              required
             />
             <SendButton type="submit" value="Send">
               Send
