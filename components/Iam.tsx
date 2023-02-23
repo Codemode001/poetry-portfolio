@@ -31,7 +31,7 @@ const Iam = ({ isDark }: ThemeProps) => {
         style={{ color: isDark ? "white" : "black" }}
       >
         <VideoPlat className="video-plat">
-          <Slide cascade triggerOnce={true}>
+          <Slide cascade triggerOnce={true} duration={500}>
             <a
               href="https://www.youtube.com/channel/UC6HRXETZCXGO2cR7qi6XUcg"
               target="_blank"

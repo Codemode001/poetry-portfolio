@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import Grid from "@mui/material/Grid";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-// import { Zoom } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 import { ThemeProps } from "types/types";
 
@@ -58,64 +58,66 @@ const Experience = ({ isDark }: ThemeProps) => {
       className="projects-mainContainer"
     >
       <ExperienceText>PROJECTS</ExperienceText>
-      {projectsList.map((item) => (
-        <div className="perProjects-container">
-          {/* <Zoom triggerOnce={true}> */}
-          <PerProjects>
-            <h1>{item.id}</h1>
-            <Grid container>
-              <Grid item md={6} xs={12}>
-                <PerImage>
-                  <Image src={item.image} />
-                </PerImage>
-              </Grid>
-              <Grid item md={6} xs={12}>
-                <PerInfo className="exp-perinfo">
-                  <h2>{item.title}</h2>
-                  <p>{item.desc}</p>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      margin: "20px 0 1rem 0",
-                    }}
-                  >
-                    <hr
+      <Fade duration={2000}>
+        {projectsList.map((item) => (
+          <div className="perProjects-container" key={item.title}>
+            {/* <Zoom triggerOnce={true}> */}
+            <PerProjects>
+              <h1>{item.id}</h1>
+              <Grid container>
+                <Grid item md={6} xs={12}>
+                  <PerImage>
+                    <Image src={item.image} />
+                  </PerImage>
+                </Grid>
+                <Grid item md={6} xs={12}>
+                  <PerInfo className="exp-perinfo">
+                    <h2>{item.title}</h2>
+                    <p>{item.desc}</p>
+                    <div
                       style={{
-                        width: "100%",
-                        border: "1px solid #6a6e75",
-                        marginRight: "10px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        margin: "20px 0 1rem 0",
                       }}
-                    />
-                    <h2 style={{ fontSize: "24px", fontWeight: "bold" }}>
-                      view
-                    </h2>
-                    <hr
-                      style={{
-                        width: "100%",
-                        border: "1px solid #6a6e75",
-                        marginLeft: "10px",
-                      }}
-                    />
-                  </div>
-                  <a href={item.youtube} target="_blank">
-                    <div className="icons-section">
-                      <YouTubeIcon
+                    >
+                      <hr
                         style={{
-                          fontSize: "3rem",
-                          color: isDark ? "white" : "black",
+                          width: "100%",
+                          border: "1px solid #6a6e75",
+                          marginRight: "10px",
+                        }}
+                      />
+                      <h2 style={{ fontSize: "24px", fontWeight: "bold" }}>
+                        view
+                      </h2>
+                      <hr
+                        style={{
+                          width: "100%",
+                          border: "1px solid #6a6e75",
+                          marginLeft: "10px",
                         }}
                       />
                     </div>
-                  </a>
-                </PerInfo>
+                    <a href={item.youtube} target="_blank">
+                      <div className="icons-section">
+                        <YouTubeIcon
+                          style={{
+                            fontSize: "3rem",
+                            color: isDark ? "white" : "black",
+                          }}
+                        />
+                      </div>
+                    </a>
+                  </PerInfo>
+                </Grid>
               </Grid>
-            </Grid>
-          </PerProjects>
-          {/* </Zoom> */}
-        </div>
-      ))}
+            </PerProjects>
+            {/* </Zoom> */}
+          </div>
+        ))}
+      </Fade>
     </MainContainer>
   );
 };

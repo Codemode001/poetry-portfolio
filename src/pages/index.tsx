@@ -14,6 +14,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { Fade } from "react-awesome-reveal";
+import { motion } from "framer-motion";
 
 import type { RootState } from "../../store/store";
 import { updateValue } from "slices/slices";
@@ -189,7 +190,13 @@ export default function Home() {
                   : { color: "var(--dark-background)" }
               }
             >
-              <div className="social-icons">FACEBOOK</div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.2 }}
+                className="social-icons"
+              >
+                FACEBOOK
+              </motion.div>
             </a>
             <a
               href="https://www.instagram.com/haroldpisos/"
@@ -200,7 +207,13 @@ export default function Home() {
                   : { color: "var(--dark-background)" }
               }
             >
-              <div className="social-icons">INSTAGRAM</div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.2 }}
+                className="social-icons"
+              >
+                INSTAGRAM
+              </motion.div>
             </a>
             <a
               href="https://twitter.com/RheyHarolld"
@@ -211,7 +224,13 @@ export default function Home() {
                   : { color: "var(--dark-background)" }
               }
             >
-              <div className="social-icons">TWITTER</div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.2 }}
+                className="social-icons"
+              >
+                TWITTER
+              </motion.div>
             </a>
           </Fade>
           {/* <div className="social-icons">GMAIL</div> */}
@@ -249,17 +268,31 @@ export default function Home() {
             <SayHi />
           </SayHiMediaQuery>
           {isDark ? (
-            <WbSunnyIcon
-              onClick={handleToggle}
-              style={{ fontSize: "1.5rem" }}
-              className="buttons-hover"
-            />
+            <motion.div
+              whileTap={{
+                rotate: 360,
+                transition: { duration: 0.5 },
+              }}
+            >
+              <WbSunnyIcon
+                onClick={handleToggle}
+                style={{ fontSize: "1.5rem" }}
+                className="buttons-hover"
+              />
+            </motion.div>
           ) : (
-            <Brightness2Icon
-              onClick={handleToggle}
-              style={{ fontSize: "1.5rem" }}
-              className="buttons-hover"
-            />
+            <motion.div
+              whileTap={{
+                rotate: 360,
+                transition: { duration: 0.5 },
+              }}
+            >
+              <Brightness2Icon
+                onClick={handleToggle}
+                style={{ fontSize: "1.5rem" }}
+                className="buttons-hover"
+              />
+            </motion.div>
           )}
         </HeaderButtonsContainer>
       </HeaderContainer>
@@ -307,7 +340,7 @@ const SocialIcons = styled.div`
     letter-spacing: 2px;
     &:hover {
       cursor: pointer;
-      border-bottom: 1px solid purple;
+      // border-bottom: 1px solid purple;
       &::after {
         content: "";
         position: absolute;

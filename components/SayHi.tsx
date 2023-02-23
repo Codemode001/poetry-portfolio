@@ -5,6 +5,7 @@ import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
 import CloseIcon from "@mui/icons-material/Close";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const SayHi = () => {
   const [open, setOpen] = useState(false);
@@ -45,7 +46,13 @@ const SayHi = () => {
 
   return (
     <>
-      <PurpleButton onClick={handleClickOpen}> Say hi!</PurpleButton>
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <PurpleButton onClick={handleClickOpen}> Say hi!</PurpleButton>
+      </motion.div>
       {!sent ? (
         <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>
           <DialogActions>
