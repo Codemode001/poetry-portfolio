@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { Fade } from "react-awesome-reveal";
-import { Slide } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import Reveal from "react-awesome-reveal";
 import Grid from "@mui/material/Grid";
@@ -117,7 +116,12 @@ const AboutMe = ({ isDark }: ThemeProps) => {
                     <h1 className="aboutme-content-h1">
                       Spoken word poet | Fullstack developer
                     </h1>
-                    <p className="aboutme-content-p">
+                    <p
+                      className="aboutme-content-p"
+                      style={{
+                        color: isDark ? "#c7c8c8" : "var(--dark-background)",
+                      }}
+                    >
                       Greetings, I'm Harold, a spoken word poet and fullstack
                       web developer who believes that art and technology can
                       coexist in perfect harmony. As a poet, I excel at crafting
@@ -306,7 +310,6 @@ const AboutMeContent = styled.div`
     margin: 1.5rem 0 0 0;
     line-height: 1.4rem;
     letter-spacing: 1px;
-    color: #c7c8c8;
   }
   display: flex;
   flex-direction: column;

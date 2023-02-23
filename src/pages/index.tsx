@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { Fade } from "react-awesome-reveal";
 
 import type { RootState } from "../../store/store";
 import { updateValue } from "slices/slices";
@@ -178,34 +179,41 @@ export default function Home() {
             isDark ? { color: "white" } : { color: "var(--dark-background)" }
           }
         >
-          <a
-            href="https://www.facebook.com/harold.pisos.9"
-            target="_blank"
-            style={
-              isDark ? { color: "white" } : { color: "var(--dark-background)" }
-            }
-          >
-            <div className="social-icons">FACEBOOK</div>
-          </a>
-          <a
-            href="https://www.instagram.com/haroldpisos/"
-            target="_blank"
-            style={
-              isDark ? { color: "white" } : { color: "var(--dark-background)" }
-            }
-          >
-            <div className="social-icons">INSTAGRAM</div>
-          </a>
-          <a
-            href="https://twitter.com/RheyHarolld"
-            target="_blank"
-            style={
-              isDark ? { color: "white" } : { color: "var(--dark-background)" }
-            }
-          >
-            <div className="social-icons">TWITTER</div>
-          </a>
-
+          <Fade>
+            <a
+              href="https://www.facebook.com/harold.pisos.9"
+              target="_blank"
+              style={
+                isDark
+                  ? { color: "white" }
+                  : { color: "var(--dark-background)" }
+              }
+            >
+              <div className="social-icons">FACEBOOK</div>
+            </a>
+            <a
+              href="https://www.instagram.com/haroldpisos/"
+              target="_blank"
+              style={
+                isDark
+                  ? { color: "white" }
+                  : { color: "var(--dark-background)" }
+              }
+            >
+              <div className="social-icons">INSTAGRAM</div>
+            </a>
+            <a
+              href="https://twitter.com/RheyHarolld"
+              target="_blank"
+              style={
+                isDark
+                  ? { color: "white" }
+                  : { color: "var(--dark-background)" }
+              }
+            >
+              <div className="social-icons">TWITTER</div>
+            </a>
+          </Fade>
           {/* <div className="social-icons">GMAIL</div> */}
           {/* <div className="social-icons">DEVELOPER MODE</div> */}
         </SocialIcons>

@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { FaTiktok } from "react-icons/fa";
 import { ThemeProps } from "types/types";
+import { Bounce } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 
 const Iam = ({ isDark }: ThemeProps) => {
   return (
@@ -13,13 +15,15 @@ const Iam = ({ isDark }: ThemeProps) => {
         }
       >
         <IamContainer className="Iam-container">
-          <section className="upper-section">
-            <p>I AM</p>
-          </section>
-          <h1 className="Iam-haroldP">Harold P.</h1>
-          <section className="lower-section">
-            <p>SPOKEN ARTIST</p>
-          </section>
+          <Bounce triggerOnce={true}>
+            <section className="upper-section">
+              <p>I AM</p>
+            </section>
+            <h1 className="Iam-haroldP">Harold P.</h1>
+            <section className="lower-section">
+              <p>SPOKEN ARTIST</p>
+            </section>
+          </Bounce>
         </IamContainer>
       </MainContainer>
       <div
@@ -27,25 +31,37 @@ const Iam = ({ isDark }: ThemeProps) => {
         style={{ color: isDark ? "white" : "black" }}
       >
         <VideoPlat className="video-plat">
-          <a
-            href="https://www.youtube.com/channel/UC6HRXETZCXGO2cR7qi6XUcg"
-            target="_blank"
-          >
-            <VideoPlatIcons
-              style={{ backgroundColor: isDark ? "#455163" : "#eeeeee" }}
+          <Slide cascade triggerOnce={true}>
+            <a
+              href="https://www.youtube.com/channel/UC6HRXETZCXGO2cR7qi6XUcg"
+              target="_blank"
             >
-              <YouTubeIcon
-                style={{ fontSize: "3rem", color: isDark ? "white" : "black" }}
-              />
-            </VideoPlatIcons>
-          </a>
-          <a href="https://www.tiktok.com/@haroldrhey?lang=en" target="_blank">
-            <VideoPlatIcons
-              style={{ backgroundColor: isDark ? "#455163" : "#eeeeee" }}
+              <Bounce triggerOnce={true} duration={600}>
+                <VideoPlatIcons
+                  style={{ backgroundColor: isDark ? "#455163" : "#eeeeee" }}
+                >
+                  <YouTubeIcon
+                    style={{
+                      fontSize: "3rem",
+                      color: isDark ? "white" : "black",
+                    }}
+                  />
+                </VideoPlatIcons>
+              </Bounce>
+            </a>
+            <a
+              href="https://www.tiktok.com/@haroldrhey?lang=en"
+              target="_blank"
             >
-              <FaTiktok style={{ color: isDark ? "white" : "black" }} />
-            </VideoPlatIcons>
-          </a>
+              <Bounce triggerOnce={true} duration={600}>
+                <VideoPlatIcons
+                  style={{ backgroundColor: isDark ? "#455163" : "#eeeeee" }}
+                >
+                  <FaTiktok style={{ color: isDark ? "white" : "black" }} />
+                </VideoPlatIcons>
+              </Bounce>
+            </a>
+          </Slide>
         </VideoPlat>
       </div>
     </>
