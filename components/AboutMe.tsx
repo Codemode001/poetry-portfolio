@@ -277,6 +277,7 @@ const Vid = styled.video`
   border-radius: 10px;
 `;
 const LargeCard = styled.div`
+  color: white;
   & .lower-hobby-desc {
     margin: 1rem 0 2rem 0;
   }

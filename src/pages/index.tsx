@@ -75,61 +75,55 @@ export default function Home() {
       }}
     >
       <List style={drawerStyle}>
-        <ListItem style={{ padding: "1rem 0 0 1.2rem" }}>
+        <ListItem
+          style={{ padding: "1rem 0 0 1.2rem" }}
+          onClick={(event) => event.stopPropagation()}
+        >
           {" "}
           {isDark ? (
-            <WbSunnyIcon
-              onClick={handleToggle}
-              style={{ fontSize: "1.5rem" }}
-              className="buttons-hover"
-            />
+            <motion.div
+              whileTap={{
+                rotate: 360,
+                transition: { duration: 0.5 },
+              }}
+            >
+              <WbSunnyIcon
+                onClick={handleToggle}
+                style={{ fontSize: "1.5rem" }}
+                className="buttons-hover"
+              />
+            </motion.div>
           ) : (
-            <Brightness2Icon
-              onClick={handleToggle}
-              style={{ fontSize: "1.5rem" }}
-              className="buttons-hover"
-            />
+            <motion.div
+              whileTap={{
+                rotate: 360,
+                transition: { duration: 0.5 },
+              }}
+            >
+              <Brightness2Icon
+                onClick={handleToggle}
+                style={{ fontSize: "1.5rem" }}
+                className="buttons-hover"
+              />
+            </motion.div>
           )}
         </ListItem>
+
         <div className="drawer-design-container">
           <div className="socials-drawer">
-            <a
-              href="https://www.facebook.com/harold.pisos.9"
-              target="_blank"
-              style={
-                isDark
-                  ? { color: "white" }
-                  : { color: "var(--dark-background)" }
-              }
-            >
+            <a href="https://www.facebook.com/harold.pisos.9" target="_blank">
               <ListItem>
                 <FacebookIcon className="drawer-icons" />
                 <div className="list-items-desc">FACEBOOK</div>
               </ListItem>
             </a>
-            <a
-              href="https://www.instagram.com/haroldpisos/"
-              target="_blank"
-              style={
-                isDark
-                  ? { color: "white" }
-                  : { color: "var(--dark-background)" }
-              }
-            >
+            <a href="https://www.instagram.com/haroldpisos/" target="_blank">
               <ListItem>
                 <InstagramIcon className="drawer-icons" />
                 <div className="list-items-desc">INSTAGRAM</div>
               </ListItem>
             </a>
-            <a
-              href="https://twitter.com/RheyHarolld"
-              target="_blank"
-              style={
-                isDark
-                  ? { color: "white" }
-                  : { color: "var(--dark-background)" }
-              }
-            >
+            <a href="https://twitter.com/RheyHarolld" target="_blank">
               <ListItem>
                 <TwitterIcon className="drawer-icons" />
                 <div className="list-items-desc">TWITTER</div>
