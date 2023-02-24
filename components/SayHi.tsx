@@ -30,7 +30,7 @@ const SayHi = () => {
           process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "default_service_id",
           process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "default_template_id",
           form.current,
-          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+          "tzprFJGk0P78bm9Qo"
         )
         .then(
           (result) => {
@@ -43,6 +43,8 @@ const SayHi = () => {
         );
     }
   };
+
+  console.log(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
 
   return (
     <>
