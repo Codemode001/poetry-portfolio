@@ -27,8 +27,8 @@ const SayHi = () => {
     if (form.current) {
       emailjs
         .sendForm(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "default_service_id",
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "default_template_id",
+          "service_5nm1wq7",
+          "template_iqzmoa5",
           form.current,
           "tzprFJGk0P78bm9Qo"
         )
