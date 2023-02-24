@@ -105,7 +105,7 @@ const AboutMe = ({ isDark }: ThemeProps) => {
                 style={{ width: "100%" }}
               >
                 <Fade duration={1000} triggerOnce={true}>
-                  <Image src="normal.png" />
+                  <Image src="myc-better-photo.png" />
                 </Fade>
               </Reveal>
             </Grid>
