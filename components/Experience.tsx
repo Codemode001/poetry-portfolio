@@ -49,6 +49,13 @@ const projectsList = [
     image: "ya-2020.png",
     youtube: "https://www.youtube.com/watch?v=cZRDxdtugHI",
   },
+  {
+    id: "07",
+    title: "Kalig-on 2023",
+    desc: "Kalig-on 2023 is a charity concert featuring talented performers showcasing their skills for the glory of the Lord. The event aims to raise funds for a charitable cause while also celebrating faith and sharing the message of hope and love with the audience.",
+    image: "kalig-on.jpg",
+    youtube: "https://www.youtube.com/watch?v=ZSUzzx7X9ek",
+  },
 ];
 
 const Experience = ({ isDark }: ThemeProps) => {
