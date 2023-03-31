@@ -5,58 +5,9 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import { Fade } from "react-awesome-reveal";
 
 import { ThemeProps } from "types/types";
+import data from "../data/data.json";
 
-const projectsList = [
-  {
-    id: "01",
-    title: "Jesus reigns bukidnon 2022",
-    desc: " It is a time to bring honor and praise by testifying the Lord's powerful work in their province and give Glory to God.",
-    image: "Jesus-reigns.jpg",
-    youtube: "https://www.youtube.com/watch?v=qXWpQEVuq0M&t=20s",
-  },
-  {
-    id: "02",
-    title: "Mindanao youth Congress 2022",
-    desc: "The Mindanao Youth Congress is a gathering of young people from across the region, brought together by a shared passion for serving the Lord and making a positive impact in their communities.",
-    image: "myc.jpg",
-    youtube: "https://www.youtube.com/watch?v=o7I1Vd5AUsM",
-  },
-  {
-    id: "03",
-    title: "El and Abi's wedding",
-    desc: "El and Abi's wedding was a magical celebration of love and commitment. The ceremony was held outdoors under a beautiful arch adorned with flowers and greenery, and the couple exchanged heartfelt vows that left not a dry eye in the house.",
-    image: "wedding1.jpg",
-    youtube: "https://www.youtube.com/watch?v=cCtP3-GO3h8",
-  },
-  {
-    id: "04",
-    title: "NCMDC representative for national poetry 2021",
-    desc: "As the NCMDC representative for national poetry 2021, I promoted poetry on a national scale with fellow poets, making a positive impact in the community and glorifying God.",
-    image: "ncmdc1.png",
-    youtube: "https://www.youtube.com/watch?v=H-e03ALqz2k",
-  },
-  {
-    id: "05",
-    title: "Mothers day entry 2020",
-    desc: "Through poetry, I seek to honor the immeasurable love and selflessness of all mothers. With heartfelt and poignant words, I aim to unite readers from all walks of life with a deep appreciation for the women who shape and inspire us, bringing us together in a powerful bond of gratitude and admiration.",
-    image: "mothersday.png",
-    youtube: "https://www.youtube.com/watch?v=W4E1t4ZNIc0",
-  },
-  {
-    id: "06",
-    title: "Youth Alive national spoken poetry competition 2020",
-    desc: "The Youth Alive national spoken poetry competition 2020 brought together talented young poets from across the country, who showcased their passion and artistry through powerful words and captivating performances, leaving a lasting impact on their audience.",
-    image: "ya-2020.png",
-    youtube: "https://www.youtube.com/watch?v=cZRDxdtugHI",
-  },
-  {
-    id: "07",
-    title: "Kalig-on 2023",
-    desc: "Kalig-on 2023 is a charity concert featuring talented performers showcasing their skills for the glory of the Lord. The event aims to raise funds for a charitable cause while also celebrating faith and sharing the message of hope and love with the audience.",
-    image: "kalig-on.jpg",
-    youtube: "https://www.youtube.com/watch?v=ZSUzzx7X9ek",
-  },
-];
+const normalize = data[0].projects;
 
 const Experience = ({ isDark }: ThemeProps) => {
   return (
@@ -66,7 +17,7 @@ const Experience = ({ isDark }: ThemeProps) => {
     >
       <ExperienceText>PROJECTS</ExperienceText>
       <Fade duration={2000}>
-        {projectsList.map((item) => (
+        {normalize.map((item) => (
           <div className="perProjects-container" key={item.title}>
             {/* <Zoom triggerOnce={true}> */}
             <PerProjects>
