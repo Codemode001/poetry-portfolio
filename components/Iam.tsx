@@ -5,6 +5,7 @@ import { FaTiktok } from "react-icons/fa";
 import { ThemeProps } from "types/types";
 import { Bounce } from "react-awesome-reveal";
 import { Slide } from "react-awesome-reveal";
+import Typewriter from "typewriter-effect";
 
 const Iam = ({ isDark }: ThemeProps) => {
   return (
@@ -21,7 +22,22 @@ const Iam = ({ isDark }: ThemeProps) => {
             </section>
             <h1 className="Iam-haroldP">Harold P.</h1>
             <section className="lower-section">
-              <p>SPOKEN ARTIST</p>
+              <p>
+                {/* <Typewriter
+                  options={{
+                    strings: [
+                      "SPOKEN ARTIST",
+                      "WEB DEVELOPER",
+                      "MOBILE APP DEVELOPER",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    deleteSpeed: 50,
+                    delay: 20,
+                  }}
+                /> */}
+                SPOKEN ARTIST
+              </p>
             </section>
           </Bounce>
         </IamContainer>
