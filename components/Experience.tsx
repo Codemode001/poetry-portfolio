@@ -27,7 +27,7 @@ const Experience = ({ isDark }: ThemeProps) => {
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           <DeveloperModeButton onClick={() => setDeveloperMode(!developerMode)}>
-            Developer Mode
+            {developerMode ? "Poet Mode" : "Developer Mode"}
           </DeveloperModeButton>
         </motion.div>
       </ModeContainer>
