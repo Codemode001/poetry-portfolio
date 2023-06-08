@@ -1,11 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import Grid from "@mui/material/Grid";
+import Icon from "@mdi/react";
+import { mdiLanguagePhp } from "@mdi/js";
+import { mdiLanguageJavascript } from "@mdi/js";
+import { mdiBitbucket } from "@mdi/js";
+import { mdiLanguageTypescript } from "@mdi/js";
 
 import developerData from "../data/developer.json";
 
-// Main Component
 const MyComponent: React.FC = () => {
+  const [screenSize, setScreenSize] = useState<any>();
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const cards = document.getElementsByClassName("card");
@@ -34,6 +40,10 @@ const MyComponent: React.FC = () => {
 
   const normalize = developerData[0].projects;
 
+  useEffect(() => {
+    setScreenSize(window.innerWidth);
+  }, []);
+
   return (
     <MainContainer>
       <CardsContainer
@@ -43,12 +53,21 @@ const MyComponent: React.FC = () => {
         }}
       >
         <Grid container>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} style={{ width: "100%" }}>
             {normalize.map((proj) => (
-              <Card className="card">
+              <Card
+                className="card"
+                style={{
+                  width: "100%",
+                  margin: screenSize > 600 ? "" : "1rem 0 1rem 0",
+                }}
+              >
                 <CardContent className="card-content">
-                  <CardImage className="card-image">
-                    <CardIcon className="fa-duotone fa-apartment"></CardIcon>
+                  <CardImage>
+                    <Image
+                      src={proj.image}
+                      style={{ width: screenSize <= 600 ? "95%" : "" }}
+                    />
                   </CardImage>
                   <CardInfoWrapper className="card-info-wrapper">
                     <CardInfo className="card-info">
@@ -56,6 +75,7 @@ const MyComponent: React.FC = () => {
                       <CardInfoTitle className="card-info-title">
                         <h3>{proj.title}</h3>
                         <h4>{proj.desc}</h4>
+                        <Icon path={proj.icon} size={1} />
                       </CardInfoTitle>
                     </CardInfo>
                   </CardInfoWrapper>
@@ -63,25 +83,32 @@ const MyComponent: React.FC = () => {
               </Card>
             ))}
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} style={{ width: "100%" }}>
             <Card
               className="card"
               style={{
-                height: "100%",
+                height: screenSize > 600 ? "100%" : "",
                 display: "flex",
                 alignItems: "center",
+                width: "100%",
               }}
             >
-              <CardContent className="card-content">
-                <CardImage className="card-image">
-                  <CardIcon className="fa-duotone fa-apartment"></CardIcon>
+              <CardContent>
+                <CardImage>
+                  <Image src="pianogod.png" style={{ width: "95%" }} />
                 </CardImage>
                 <CardInfoWrapper className="card-info-wrapper">
                   <CardInfo className="card-info">
                     <CardInfoIcon className="fa-duotone fa-apartment"></CardInfoIcon>
                     <CardInfoTitle className="card-info-title">
                       <h3>Piano God</h3>
-                      <h4>Card Subtitle</h4>
+                      <IconsContainer>
+                        <Icon path={mdiLanguagePhp} size={1} />
+                        <Icon path={mdiLanguageJavascript} size={1} />
+                        <Icon path={mdiBitbucket} size={1} />
+                        <h4>Xampp</h4>
+                        <h4>Selenum</h4>
+                      </IconsContainer>
                     </CardInfoTitle>
                   </CardInfo>
                 </CardInfoWrapper>
@@ -96,14 +123,51 @@ const MyComponent: React.FC = () => {
 
 const DeveloperMode = () => (
   <Root>
+    {/* <Bounce triggerOnce={true} duration={700}> */}
     <MyComponent />
+    {/* </Bounce> */}
+    <OtherProjects>
+      <h2>Others</h2>
+      <span>projects that was stopped or was not luanched</span>
+    </OtherProjects>
   </Root>
 );
 
 export default DeveloperMode;
 
+const IconsContainer = styled.div``;
+
+const CardContent = styled.div`
+  background-color: var(--card-color);
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  inset: 1px;
+  padding: 10px;
+  position: absolute;
+  z-index: 2;
+`;
+
+const Image = styled.img`
+  object-fit: cover;
+  width: 50%;
+  border-radius: 10px;
+`;
+
+const CardImage = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 2rem;
+`;
+
+const OtherProjects = styled.div``;
+
 const MainContainer = styled.div`
   display: flex;
+  justify-content: center;
+  margin: 0 0 5rem 0;
 `;
 
 const Root = styled.div`
@@ -206,14 +270,6 @@ const Root = styled.div`
 
   i {
     color: rgb(240, 240, 240);
-  }
-
-  .card-image {
-    align-items: center;
-    display: flex;
-    height: 140px;
-    justify-content: center;
-    overflow: hidden;
   }
 
   .card-image > i {
@@ -377,7 +433,7 @@ const Card = styled.div`
   height: 260px;
   flex-direction: column;
   position: relative;
-  width: 300px;
+  width: 100%;
 
   &:hover::before {
     opacity: 1;
@@ -413,26 +469,6 @@ const Card = styled.div`
     );
     z-index: 1;
   }
-`;
-
-const CardContent = styled.div`
-  background-color: var(--card-color);
-  border-radius: inherit;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  inset: 1px;
-  padding: 10px;
-  position: absolute;
-  z-index: 2;
-`;
-
-const CardImage = styled.div`
-  align-items: center;
-  display: flex;
-  height: 140px;
-  justify-content: center;
-  overflow: hidden;
 `;
 
 const CardIcon = styled.i`

@@ -5,15 +5,17 @@
         "id": "01",
         "title": "AFG News",
         "desc": "lorem epsum dolor",
-        "image": "ya-2020.png",
-        "link": "https://www.youtube.com/watch?v=cZRDxdtugHI"
+        "image": "afgnews.png",
+        "link": "https://www.youtube.com/watch?v=cZRDxdtugHI",
+        "icon": "mdiLanguageTypescript"
       },
       {
         "id": "02",
         "title": "AFG Charity",
         "desc": "lorem epsum dolor",
-        "image": "kalig-on.jpg",
-        "link": "https://www.youtube.com/watch?v=ZSUzzx7X9ek"
+        "image": "afgcharity.png",
+        "link": "https://www.youtube.com/watch?v=ZSUzzx7X9ek",
+        "icon": "mdiLanguageTypescript"
       }
     ]
   }
