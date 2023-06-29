@@ -5,7 +5,13 @@ import Icon from "@mdi/react";
 import { mdiLanguagePhp } from "@mdi/js";
 import { mdiLanguageJavascript } from "@mdi/js";
 import { mdiBitbucket } from "@mdi/js";
+import { mdiLanguageHtml5 } from "@mdi/js";
+import { mdiDatabaseSearch } from "@mdi/js";
+import { mdiLanguageCss3 } from "@mdi/js";
 import { mdiLanguageTypescript } from "@mdi/js";
+import { TbBrandNextjs } from "react-icons/tb";
+import { TbBrandSupabase } from "react-icons/tb";
+import { TbBrandJavascript } from "react-icons/tb";
 
 import developerData from "../data/developer.json";
 
@@ -74,8 +80,24 @@ const MyComponent: React.FC = () => {
                       <CardInfoIcon className="fa-duotone fa-apartment"></CardInfoIcon>
                       <CardInfoTitle className="card-info-title">
                         <h3>{proj.title}</h3>
-                        <h4>{proj.desc}</h4>
-                        <Icon path={proj.icon} size={1} />
+                        {/* <h4>{proj.desc}</h4> */}
+                        <IconsContainer>
+                          <VideoPlatIcons
+                            style={{ width: "3rem", height: "3rem" }}
+                          >
+                            <Icon path={mdiLanguageTypescript} size={1.5} />
+                          </VideoPlatIcons>
+                          <VideoPlatIcons
+                            style={{ width: "3rem", height: "3rem" }}
+                          >
+                            <TbBrandNextjs />
+                          </VideoPlatIcons>
+                          <VideoPlatIcons
+                            style={{ width: "3rem", height: "3rem" }}
+                          >
+                            <TbBrandSupabase />
+                          </VideoPlatIcons>
+                        </IconsContainer>
                       </CardInfoTitle>
                     </CardInfo>
                   </CardInfoWrapper>
@@ -103,11 +125,24 @@ const MyComponent: React.FC = () => {
                     <CardInfoTitle className="card-info-title">
                       <h3>Piano God</h3>
                       <IconsContainer>
-                        <Icon path={mdiLanguagePhp} size={1} />
-                        <Icon path={mdiLanguageJavascript} size={1} />
-                        <Icon path={mdiBitbucket} size={1} />
-                        <h4>Xampp</h4>
-                        <h4>Selenum</h4>
+                        <VideoPlatIcons>
+                          <Icon path={mdiLanguagePhp} size={1.5} />
+                        </VideoPlatIcons>
+                        <VideoPlatIcons>
+                          <TbBrandJavascript />
+                        </VideoPlatIcons>
+                        <VideoPlatIcons>
+                          <Icon path={mdiBitbucket} size={1.5} />
+                        </VideoPlatIcons>
+                        <VideoPlatIcons>
+                          <Icon path={mdiLanguageHtml5} size={1.5} />
+                        </VideoPlatIcons>
+                        <VideoPlatIcons>
+                          <Icon path={mdiDatabaseSearch} size={1.5} />
+                        </VideoPlatIcons>
+                        <VideoPlatIcons>
+                          <Icon path={mdiLanguageCss3} size={1} />
+                        </VideoPlatIcons>
                       </IconsContainer>
                     </CardInfoTitle>
                   </CardInfo>
@@ -128,14 +163,29 @@ const DeveloperMode = () => (
     {/* </Bounce> */}
     <OtherProjects>
       <h2>Others</h2>
-      <span>projects that was stopped or was not luanched</span>
+      <span>projects for fun or assessments</span>
     </OtherProjects>
   </Root>
 );
 
 export default DeveloperMode;
 
-const IconsContainer = styled.div``;
+const VideoPlatIcons = styled.div`
+  background-color: #455163;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+`;
+
+const IconsContainer = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+`;
 
 const CardContent = styled.div`
   background-color: var(--card-color);
@@ -370,7 +420,7 @@ const Root = styled.div`
     bottom: 10px;
   }
 
-  #youtube-link > i {
+  #aboutme-content-p-link > i {
     color: rgb(239, 83, 80);
   }
 
